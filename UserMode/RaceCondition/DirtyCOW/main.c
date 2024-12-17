@@ -42,12 +42,14 @@ int main(int argc,char *argv[])
 	target_fd = open(argv[1], O_RDONLY);
 	if (target_fd < 0) {
 		printf("open [%s] failed\n", argv[1]);
+		return -2;
 	}
 	fstat(target_fd, &target_fst);
 
 	target_fmap = mmap(NULL, target_fst.st_size ,PROT_READ, MAP_PRIVATE, target_fd, 0);
 	if (((signed long)target_fmap) <= 0) {
 		printf("mmap [%s] by file id failed\n", argv[1]);
+		return -3;
 	}
 
 	pthread_create(&th4write, NULL, mem_write_th, argv[2]);

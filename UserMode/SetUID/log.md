@@ -216,14 +216,14 @@ struct task_struct
 
 ```
 文件类型：
-套接字			#define S_IFSOCK 0140000
-软链接文件		#define S_IFLNK	 0120000
-普通文件		#define S_IFREG  0100000
-块设备			#define S_IFBLK  0060000
-目录			#define S_IFDIR  0040000
-字符设备		#define S_IFCHR  0020000
-管道设备		#define S_IFIFO  0010000
-特权用户程序	#define S_ISUID  0004000
+套接字 #define S_IFSOCK 0140000
+软链接文件 #define S_IFLNK	 0120000
+普通文件 #define S_IFREG  0100000
+块设备 #define S_IFBLK  0060000
+目录 #define S_IFDIR  0040000
+字符设备 #define S_IFCHR  0020000
+管道设备 #define S_IFIFO  0010000
+特权用户程序 #define S_ISUID  0004000
 
 访问权限：
 #define S_IRWXU 00700
