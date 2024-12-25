@@ -1,8 +1,8 @@
 # simple makefile template
 CC=gcc
-CFLAG=-g -save-temps -fstack-protector -z noexecstack -z relro -z now
+CFLAG=-g -save-temps -fstack-protector -z noexecstack
 # compiler options
-LDFLAG=
+LDFLAG=-no-pie
 # link options
 LIB_DIR=
 LIB=
